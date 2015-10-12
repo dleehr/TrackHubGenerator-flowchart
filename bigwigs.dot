@@ -1,5 +1,5 @@
 digraph {
-  graph [fontname = "helvetica"];
+  graph [fontname = "helvetica", dpi=300];
   node [fontname = "helvetica"];
   edge [fontname = "helvetica"];
 
