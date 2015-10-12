@@ -6,7 +6,7 @@ digraph {
   label="Building track hub metadata"
 
   node[shape="box", style="rounded"]
-    hub_yaml; genomes_yaml; hub_txt; genomes_txt; hg19_trackdb_txt; hg38_trackdb_txt;
+    hub_yaml; genomes_yaml; hub_txt; genomes_txt; hg19_trackdb_txt; hg38_trackdb_txt; protein_1_hg19; protein_1_hg38; protein_2_hg19; protein_2_hg38;
 
   node[shape="box",style=""]
 
