@@ -1,0 +1,20 @@
+digraph {
+  label="Building track hub metadata"
+
+  node[shape="box", style="rounded"]
+    hub_yaml; genomes_yaml; hub_txt; genomes_txt; hg19_trackdb_txt; hg38_trackdb_txt;
+
+  node[shape="box",style=""]
+
+  hub_yaml->render_hub->hub_txt
+  genomes_yaml->render_genomes->genomes_txt
+
+  protein_1_hg19->render_tracks->hg19_trackdb_txt
+  protein_2_hg19->render_tracks->hg19_trackdb_txt
+  protein_1_hg38->render_tracks->hg38_trackdb_txt
+  protein_2_hg38->render_tracks->hg38_trackdb_txt
+}
+
+# Process is rectangle
+# input/output is parallelogram
+# roundrects for start/end
