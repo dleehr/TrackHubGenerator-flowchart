@@ -1,0 +1,28 @@
+digraph {
+  label="Converting dataset for single protein to 4 bigwig tracks"
+
+  node[shape="box", style="rounded"]
+    bedgraph_files; bigwig_hg19_1w; bigwig_hg19_maxprob; bigwig_hg38_1w; bigwig_hg38_maxprob;
+
+  node[shape="box",style=""]
+
+  bedgraph_files->combine
+  combine->liftover
+  combine->hg19_maxprob[label="hg19"]
+  liftover->hg38_maxprob[label="hg38"]
+  combine->hg19_1w[label="hg19"]
+  liftover->hg38_1w[label="hg38"]
+
+  hg19_1w->bigwig_hg19_1w
+  hg19_maxprob->bigwig_hg19_maxprob
+  hg38_1w->bigwig_hg38_1w
+  hg38_maxprob->bigwig_hg38_maxprob
+
+
+  bedgraph_files[label="Per-chrom bedgraph files"]
+  liftover[label="liftOver"]
+}
+
+# Process is rectangle
+# input/output is parallelogram
+# roundrects for start/end
