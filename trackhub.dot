@@ -1,4 +1,8 @@
 digraph {
+  graph [fontname = "helvetica"];
+  node [fontname = "helvetica"];
+  edge [fontname = "helvetica"];
+
   label="Building track hub metadata"
 
   node[shape="box", style="rounded"]

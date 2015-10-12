@@ -1,4 +1,8 @@
 digraph {
+  graph [fontname = "helvetica"];
+  node [fontname = "helvetica"];
+  edge [fontname = "helvetica"];
+
   label="Converting dataset for single protein to 4 bigwig tracks"
 
   node[shape="box", style="rounded"]
