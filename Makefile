@@ -1,6 +1,6 @@
 all: png svg
-png: trackhub.png bigwigs.png
-svg: trackhub.svg bigwigs.svg
+png: trackhub.png bigwigs.png workflow.png
+svg: trackhub.svg bigwigs.svg workflow.svg
 
 %.png: %.dot
 	dot -Tpng -o $@ $^

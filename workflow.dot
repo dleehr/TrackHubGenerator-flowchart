@@ -1,0 +1,23 @@
+digraph {compound=true
+  graph [fontname = "helvetica", dpi=300];
+  node [fontname = "helvetica", shape="box"];
+  edge [fontname = "helvetica"];
+
+  label="bigbed-workflow.cwl"
+
+"bigbed-workflow.cwl#change_precision" [label="change_precision"]
+"bigbed-workflow.cwl#resize" [label="resize"]
+"bigbed-workflow.cwl#filter" [label="filter"]
+"bigbed-workflow.cwl#sort" [label="sort"]
+"bigbed-workflow.cwl#combine" [label="combine"]
+"bigbed-workflow.cwl#bed_to_bigbed" [label="bed_to_bigbed"]
+"bigbed-workflow.cwl#add_score_column" [label="add_score_column"]
+"bigbed-workflow.cwl#fetch_chrom_sizes" [label="fetch_chrom_sizes"]
+"bigbed-workflow.cwl#sort" -> "bigbed-workflow.cwl#change_precision" []
+"bigbed-workflow.cwl#fetch_chrom_sizes" -> "bigbed-workflow.cwl#bed_to_bigbed" []
+"bigbed-workflow.cwl#add_score_column" -> "bigbed-workflow.cwl#bed_to_bigbed" []
+"bigbed-workflow.cwl#combine" -> "bigbed-workflow.cwl#filter" []
+"bigbed-workflow.cwl#filter" -> "bigbed-workflow.cwl#resize" []
+"bigbed-workflow.cwl#resize" -> "bigbed-workflow.cwl#sort" []
+"bigbed-workflow.cwl#change_precision" -> "bigbed-workflow.cwl#add_score_column" []
+}
